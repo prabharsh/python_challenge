@@ -13,13 +13,13 @@ total_change_PL = 0
 # creating array lists from csv
 with open(bcsvpt) as csv_bud_dt:
      cread = csv.reader(csv_bud_dt , delimiter=',')
+     # Read the header row.
+     headers = next(cread)
      for lines in cread:
         csvdate.append(lines[0])
         csvPL.append(lines[1])
 
-#Removing header row   
-csvdate.pop(0)
-csvPL.pop(0)
+
 
 # total months caluculations
 num_months = (len(csvdate)) #totalmonths 
