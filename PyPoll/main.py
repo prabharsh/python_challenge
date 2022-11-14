@@ -13,16 +13,14 @@ winner = "TBD"
 # creating array lists from csv
 with open(ecsvdt) as csv_ele_dt:
     eread = csv.reader(csv_ele_dt , delimiter=',')
+    # Read the header row.
+    headers = next(eread)
     for infoln in eread:
         eBallotID.append(infoln[0])
         eCountry.append(infoln[1])
         eCandidate.append(infoln[2])
 
 
-#Removing header row from array lists  
-eBallotID.pop(0)
-eCountry.pop(0)
-eCandidate.pop(0)
 
 
 
